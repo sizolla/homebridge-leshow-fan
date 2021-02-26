@@ -24,10 +24,6 @@ RosouLexiuCirculationFan = function(platform, config) {
         this.accessories['fanAccessory'] = new RosouLexiuCirculationFanAccessory(this);
     }
 	
-    if(!this.config['buzzerSwitchDisable'] && this.config['buzzerSwitchName'] && this.config['buzzerSwitchName'] != "") {
-        this.accessories['buzzerSwitchAccessory'] = new RosouLexiuCirculationFanBuzzerSwitchAccessory(this);
-    }
-	
     var accessoriesArr = this.obj2array(this.accessories);
     
     this.platform.log.debug("[MiFanPlatform][DEBUG]Initializing " + this.config["type"] + " device: " + this.config["ip"] + ", accessories size: " + accessoriesArr.length);
@@ -60,24 +56,24 @@ RosouLexiuCirculationFanAccessory.prototype.getServices = function() {
     activeCharacteristic
         .on('get', function(callback) {
             that.device.call("get_prop", ["power"]).then(result => {
-                that.platform.log.debug("[MiFanPlatform][DEBUG]MiDCVFFanFanAccessory - Active - getActive: " + result);
+                that.platform.log.debug("[MiFanPlatform][DEBUG]FanAccessory - Active - getActive: " + result);
                 callback(null, result[0] === "0" ? Characteristic.Active.ACTIVE : Characteristic.Active.INACTIVE);
             }).catch(function(err) {
-                that.platform.log.error("[MiFanPlatform][ERROR]MiDCVFFanFanAccessory - Active - getActive Error: " + err);
+                that.platform.log.error("[MiFanPlatform][ERROR]FanFanAccessory - Active - getActive Error: " + err);
                 callback(err);
             });
         }.bind(this))
         .on('set', function(value, callback) {
-            that.platform.log.debug("[MiFanPlatform][DEBUG]MiDCVFFanFanAccessory - Active - setActive: " + value);
+            that.platform.log.debug("[MiFanPlatform][DEBUG]FanFanAccessory - Active - setActive: " + value);
             that.device.call("set_power", [value ? "1" : "0"]).then(result => {
-                that.platform.log.debug("[MiFanPlatform][DEBUG]MiDCVFFanFanAccessory - Active - setActive Result: " + result);
+                that.platform.log.debug("[MiFanPlatform][DEBUG]FanFanAccessory - Active - setActive Result: " + result);
                 if(result[0] === "ok") {
                     callback(null);
                 } else {
                     callback(new Error(result[0]));
                 }            
             }).catch(function(err) {
-                that.platform.log.error("[MiFanPlatform][ERROR]MiDCVFFanFanAccessory - Active - setActive Error: " + err);
+                that.platform.log.error("[MiFanPlatform][ERROR]FanFanAccessory - Active - setActive Error: " + err);
                 callback(err);
             });
         }.bind(this));

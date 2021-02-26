@@ -6,13 +6,13 @@
 
 
 
-지원기기
+# 지원기기
 
 1.Xiaomi Rosou Lexiu SS310 Air Circulation Standing Floor Fan (leshow.fan.ss320)
 
 
 
-설정
+# 설정
         {
             "platform": "MiFanPlatform",
             "deviceCfgs": [

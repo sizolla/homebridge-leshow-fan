@@ -5,7 +5,7 @@ const miio = require('miio');
 
 var Accessory, PlatformAccessory, Service, Characteristic, UUIDGen;
 
-DmakerFan = function(platform, config) {
+RosouLexiuCirculationFan = function(platform, config) {
     this.init(platform, config);
     
     Accessory = platform.Accessory;

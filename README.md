@@ -11,9 +11,11 @@
 1.Xiaomi Rosou Lexiu SS310 Air Circulation Standing Floor Fan (leshow.fan.ss320)
 
 
+
 # 지원기능
 
 1. switch on/off
+
 
 
 # 설정

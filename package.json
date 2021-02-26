@@ -1,0 +1,28 @@
+{
+  "name": "homebridge-leshow-fan",
+  "version": "0.0.1",
+  "description": "XiaoMi Leshow fan plugins for HomeBridge(https://github.com/nfarina/homebridge).",
+  "keywords": [
+    "homebridge-plugin",
+    "xiaomi",
+    "mi",
+    "leshow",
+    "fan"
+  ],
+  "author": "sizolla",
+  "homepage": "https://github.com/sizolla/homebridge-leshow-fan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sizolla/homebridge-leshow-fan"
+  },
+  "bugs": {
+    "url": "https://github.com/sizolla/homebridge-leshow-fan/issues"
+  },
+  "engines": {
+    "node": ">=12.18.3",
+    "homebridge": ">=1.0.0"
+  },
+  "dependencies": {
+    "miio": "0.15.6"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "homebridge-leshow-fan",
   "version": "0.0.1",
-  "description": "XiaoMi Leshow fan plugins for HomeBridge(https://github.com/nfarina/homebridge).",
+  "description": "XiaoMi Leshow fan plugins for HomeBridge.",
   "keywords": [
     "homebridge-plugin",
     "xiaomi",

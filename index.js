@@ -57,10 +57,6 @@ function MiFanPlatform(log, config, api) {
     if (api) {
         this.api = api;
     }
-    
-    this.log.info("[MiFanPlatform][INFO]***********************************************************");
-    this.log.info("[MiFanPlatform][INFO]**********MiFanPlatform started****************************")
-    this.log.info("[MiFanPlatform][INFO]***********************************************************");
 }
 
 MiFanPlatform.prototype = {

@@ -15,6 +15,7 @@
 # 지원기능
 
 1. switch on/off
+2. swing mode
 
 
 

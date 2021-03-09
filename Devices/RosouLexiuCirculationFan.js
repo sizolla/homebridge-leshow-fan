@@ -79,7 +79,7 @@ RosouLexiuCirculationFanAccessory.prototype.getServices = function() {
             });
         }.bind(this));
      
-    //
+    //swing mode
     swingModeCharacteristic
   	    .on('get', function(callback) {
 	        that.device.call("get_prop", ["yaw"]).then(result => {
